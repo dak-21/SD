@@ -8,17 +8,7 @@ Immediate pop-up notifications to the best-equipped hospitals nearby
 Model tweaking and retraining tools
 Data visualization and export/import features
 
-SD/
-├── expand.py
-├── diagram.py
-├── hospital_data.xlsx           
-├── hospital_sur_re_readiness_ai_agent/
-│   └── agent_notifier.py        # HospitalSurgeReadinessAgent class
-├── CROWD/
-│   ├── metrics.py       # Streamlit dashboard
-│              
-├── main.py
-└──
+
 ⚡ Features
 
 Upload crowd event CSVs (columns: Density, Speed, PoseVariance, optionally Latitude/Longitude)
