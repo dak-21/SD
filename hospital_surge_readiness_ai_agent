@@ -1,0 +1,38 @@
+digraph "Hospital Surge Readiness AI Agent" {
+	graph [fontcolor="#2D3436" fontname="Sans-Serif" fontsize=15 label="Hospital Surge Readiness AI Agent" nodesep=0.60 pad=2.0 rankdir=LR ranksep=0.75 splines=ortho]
+	node [fixedsize=true fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 height=1.4 imagescale=true labelloc=b shape=box style=rounded width=1.4]
+	edge [color="#7B8894"]
+	subgraph "cluster_Crowd & Event Data" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="Crowd & Event Data" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"34ebe8cbeea24740b5fcbb38f2d1e75e" [label="Crowd Sensors" height=1.9 image="C:\Users\dekoushik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\resources/onprem/client\client.png" shape=none]
+		"77e9c6ac28fa4aebb547cd71235223b2" [label="Mobile Trackers" height=1.9 image="C:\Users\dekoushik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\resources/onprem/client\client.png" shape=none]
+		"9e965bf531b34dfd9a1c680d843e16db" [label="Event APIs" height=1.9 image="C:\Users\dekoushik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\resources/onprem/client\client.png" shape=none]
+	}
+	subgraph "cluster_AI Agent" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="AI Agent" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"1e5f245a690348fca193fb7acdb22c1b" [label="Data Processing" height=1.9 image="C:\Users\dekoushik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\resources/onprem/analytics\spark.png" shape=none]
+		f2235a2943a34d28baff8109b0404173 [label="ML Model" height=1.9 image="C:\Users\dekoushik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\resources/onprem/analytics\spark.png" shape=none]
+		fe427cb1c2b44a97af2ea02f0486ea65 [label="Continuous Learning" height=1.9 image="C:\Users\dekoushik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\resources/onprem/compute\server.png" shape=none]
+		"28f9a7c595d942e9b4865f799ed5e914" [label="Resource Orchestration" height=1.9 image="C:\Users\dekoushik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\resources/onprem/compute\server.png" shape=none]
+	}
+	subgraph "cluster_Hospital System" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="Hospital System" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"82177dd55b704e0d814fe6d063e9137e" [label="Hospital Beds DB" height=1.9 image="C:\Users\dekoushik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\resources/onprem/database\postgresql.png" shape=none]
+		c74aeb85e22b48649944b6ff84ab8ddc [label="Notification Service" height=1.9 image="C:\Users\dekoushik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\resources/onprem/compute\server.png" shape=none]
+		b167244cc88442d09466237fc32c717d [label="Resource Tracking" height=1.9 image="C:\Users\dekoushik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\resources/onprem/compute\server.png" shape=none]
+	}
+	ea01ef2f28ac49a1a744fc417935ba8c [label="Dashboard (Ops/Staff)" height=1.9 image="C:\Users\dekoushik\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\resources/onprem/client\client.png" shape=none]
+	"34ebe8cbeea24740b5fcbb38f2d1e75e" -> "1e5f245a690348fca193fb7acdb22c1b" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"77e9c6ac28fa4aebb547cd71235223b2" -> "1e5f245a690348fca193fb7acdb22c1b" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"9e965bf531b34dfd9a1c680d843e16db" -> "1e5f245a690348fca193fb7acdb22c1b" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"1e5f245a690348fca193fb7acdb22c1b" -> f2235a2943a34d28baff8109b0404173 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	f2235a2943a34d28baff8109b0404173 -> "28f9a7c595d942e9b4865f799ed5e914" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	f2235a2943a34d28baff8109b0404173 -> "82177dd55b704e0d814fe6d063e9137e" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"82177dd55b704e0d814fe6d063e9137e" -> ea01ef2f28ac49a1a744fc417935ba8c [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"28f9a7c595d942e9b4865f799ed5e914" -> b167244cc88442d09466237fc32c717d [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"28f9a7c595d942e9b4865f799ed5e914" -> c74aeb85e22b48649944b6ff84ab8ddc [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	b167244cc88442d09466237fc32c717d -> ea01ef2f28ac49a1a744fc417935ba8c [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	c74aeb85e22b48649944b6ff84ab8ddc -> ea01ef2f28ac49a1a744fc417935ba8c [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	f2235a2943a34d28baff8109b0404173 -> fe427cb1c2b44a97af2ea02f0486ea65 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	fe427cb1c2b44a97af2ea02f0486ea65 -> f2235a2943a34d28baff8109b0404173 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+}
