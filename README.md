@@ -1,3 +1,5 @@
+<img width="300" height="150" alt="image" src="https://github.com/user-attachments/assets/1f225d06-c638-44d0-895e-5e82207ede14" />
+
 🚥 Overview
 This dashboard helps supervisors monitor crowd safety during large public events and instantly notify nearby hospitals for surge response if risky crowd behaviors (stampede, dispersal, abnormal density/speed) are detected by AI.
 It integrates:
